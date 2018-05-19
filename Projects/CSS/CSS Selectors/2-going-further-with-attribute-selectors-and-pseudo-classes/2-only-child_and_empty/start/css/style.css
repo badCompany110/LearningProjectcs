@@ -1,0 +1,27 @@
+/* Structural Pseudo-classes------------------ */
+
+/* li:first-child {
+  background: #52bab3;
+  color: white;
+}
+
+li:last-child {
+  border: none;
+} */
+
+/*:nth-child pseudo-class------------------ */
+
+/* li:nth-child(even){
+	background-color: #00ff7f;
+} */
+
+/* li:nth-child(3){
+	background-color: #00ff7f;
+} */
+
+li:nth-child(2n+3){
+	background-color: #00ff7f;
+	
+}
+
+	/* This tells the browser to selected every other list item starting with the 3rd one in the list. */ 

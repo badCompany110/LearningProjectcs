@@ -1,0 +1,241 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+	padding-top: 68px;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+
+
+.name {
+	font-size: 1.25em;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.banner {
+	color: #fff;
+	background: #3acec2;
+	text-align:center;
+	padding: 40px 0;
+}
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	width: 190px;
+}
+
+h2{
+	margin-top: 50px;
+}
+
+figure{
+	position: relative;
+	margin-left: auto;
+	
+}
+
+figcaption{
+	background: rgba(125,118,162,.8);
+	
+	font-size: .75em;
+	
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+h4{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.img{
+	width: 35px;
+	position: absolute;
+	top: -15px;
+	left: -15px;
+}
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+@media(max-width: 768px){
+	.main-header{
+		text-align:center;
+	}
+
+	.main-nav li{
+		padding: 10px
+	}
+	
+	.main-nav a{
+	display: block;
+}
+
+	
+	.width{
+		width: 95%;
+		margin: auto;
+	}
+}
+
+@media (min-width: 769px) {
+		.main-width{
+		width: 85%;
+		margin: auto;
+	}
+	
+	.main-header{
+		text-align: right;
+		position: fixed;
+		background:#b0e0e6 ;
+		box-shadow: 0 1px 4px #f0ffff;
+		width: 100%;
+		top: 0;
+		z-index: 1;
+	}
+	
+	
+	.name,
+	.main-nav,
+	.main-nav li{
+		display: inline-block;
+		
+	}
+	
+	.name{
+		float: left;
+	}
+	
+	.main-nav{
+		margin-top: 17px;
+	}
+	
+	.main-nav li{
+		padding-left: 50px;
+	}
+	
+	
+	.secondary-col,
+	.primary-col{
+		float: left;
+		width: 50%;
+		padding: 0 13px;
+	}
+	
+	
+@media(min-width: 1000px){
+	.secondary-col{
+		float: left;
+		width: 30%;
+		padding: 0 13px;
+	}
+	
+	.primary-col{
+		float: left;
+		width: 40%;
+		padding: 0 13px;
+	}
+	
+	.tertiary-col{
+		float: left;
+		width: 30%;
+		padding: 0 13px;
+	}
+	
+	.main-width{
+		max-width: 1150px
+	}
+	
+	
+	
+}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+
+
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+

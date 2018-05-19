@@ -1,0 +1,271 @@
+/* Combinators ------------- */
+
+form > a{
+	font-size:.7em;
+}
+				/* targets direct children */
+
+.btn+.btn{
+	margin-left: 20px;
+}
+				/* targets siblings directly next to each other. In this case it keeps the first button left aligned while the second gets a margin.  */
+
+h1~label{
+	background: #4b0082;
+	color: white;
+	}
+				/* targets all the label siblings of the h1 element */
+				
+
+
+
+/* :first-child,:last-child, :only-child,: :empty------------------ 
+------------------------------------------------------------------*/
+
+li:first-child{
+	background-color: #20b2aa;
+	color: white;
+}
+
+li:last-child{
+	background-color: #20b2aa;
+	color: white;
+	
+}
+
+span:only-child{
+	color: #52bab3;
+	font-size: 1.5em;
+}
+
+
+li:empty{
+	background: tomato;
+}
+
+
+
+/* begins with, ends with, contains selectors------------------ 
+------------------------------------------------------------------*/
+
+
+
+a[href^='http://']{
+	color:  	#0000cd;
+	text-decoration: none;
+	/* background-repeat: no-repeat; */
+	/* background-size: 18px 18px; */
+	/* padding-left: 25px */
+}
+
+/* Begins with selector */
+
+a[href$='.pdf']{
+	background-image: url('../img/icn-pdf.svg');
+}
+a[href$='.jpg']{
+	background-image: url('../img/icn-picture.svg');
+}
+a[href$='.zip']{
+	background-image: url('../img/icn-zip.svg');
+}
+
+/* Ends with selector */
+
+a[href*='downloads']{
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	padding-left: 25px
+}
+
+img[src*='thumbnails']{
+	margin: 4px;
+	border: 5px solid black;
+	width: 180px;
+	height: 140px;
+}
+
+/* Contains Selector */
+
+
+
+
+/* UI element states pseudo-classes ------------ */
+
+input:focus,
+textarea:focus{
+	border-color: #00fa9a;
+}
+
+input:disabled{
+	background: lightgray;
+}
+
+/* input[type='checkbox']:checked+label{ */
+	/* font-weight: bold; */
+/* } */
+
+input:checked+label{
+	font-weight: bold;
+}
+
+				/* Makes the input label bold if the check box is checked */
+
+
+
+				
+				
+				/* :nth-child Pseudo-classes------------------
+--------------------------------------------- */
+
+li:nth-child(-n+4) {
+  background: #52bab3;
+  color: white;
+}
+
+
+
+
+/* :nth-of-type Pseudo-classes------------------
+--------------------------------------------- */
+
+div:nth-of-type(4){
+	background: #52bab3;
+  color: white;
+}
+				/* Will always target the 4th div no matter if there are other nested elements inside its parent element. nth-child doesn't do this */
+
+div:nth-last-of-type(4){
+	background: #52bab3;
+  color: white;
+}
+
+				/* same as nth-of-type but starts from the bottom up */
+				
+
+
+				
+				
+/* :root Pseudo-classes------------------
+--------------------------------------------- */			
+
+				
+:root{
+	background:  	#87ceeb;
+}
+
+				/* targets the root of the document, generally the whole doc */
+				
+				
+
+				
+				
+/* :target Pseudo-classes------------------
+--------------------------------------------- */
+
+:target{
+	background-color: darkgray;
+	color: #00ff7f;
+}
+
+#col-c:target{
+	background-color: #eff1f2;
+	color: #00ff7f;
+	box-shadow: -10px 30px 6px #2e8b57;
+}
+
+
+
+
+
+/* :not Pseudo-classes------------------
+--------------------------------------------- */
+
+input:not([type='submit']){
+	border: 1px solid red;
+}
+
+				/* this targets all input selectors that do NOT have the type of submit */
+				
+				
+
+				
+				
+/* :first-line, :first-letter  Pseudo-classes------------------
+--------------------------------------------- */
+
+
+.intro:first-line{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+				/* targets the first line of selected element no matter what size the screen is */
+
+.intro:first-letter{
+	float: left;
+	font-size: 80px;
+	color: white;
+	padding: 5px 10px;
+	background: #384047;
+	margin: 10px 10px 0 0;
+	border-radius: 5px;
+	line-height: 1;
+}
+	
+				/* targets the first letter of selected element no matter what size the screen is */ 
+				
+
+
+				
+				
+/* :before, :after Pseudo-classes------------------
+--------------------------------------------- */				
+				
+				
+				
+.jpg:before{
+	content: 'JPG -  ' url(../img/icn-picture.svg);
+	font-size: .75em;
+	margin-right: 6px;
+}
+
+				/* Places the JPG and image before the .jpp class */
+
+.zip:after{
+	content: ' - ZIP -  ' url(../img/icn-zip.svg);
+	font-size: .75em;
+	margin-left: 6px;
+}
+
+				/* Places after the .zip class */
+
+h1:before,
+h1:after{
+	content:'';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: coral;
+	margin: 0 10px;
+}
+
+				/* Creates a circle placed before and after the H1 element */
+				
+				
+
+				
+				
+/* :attr  Pseudo-classes------------------
+--------------------------------------------- */
+
+.d-loads a:after{
+	content: attr(title);
+	display: inline-block;
+	color: initial;
+	font-size: .65em;
+	margin-left: 5px;
+}
+
+				/* Places the title after the a element of the .d-loads class. can also be used for href ext */

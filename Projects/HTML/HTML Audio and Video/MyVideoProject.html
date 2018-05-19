@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video Project</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+		<h1>HTML Video and Audio</h1>
+		<h2>Video Example 1
+		</h2>
+		
+		<div class="wrapper">
+		<!-- formats the video by class in pre coded css -->
+			<video src='http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4' type='video/mp4' controls autoplay>
+			</video>
+			<!-- much like linking to a page, <video src=''></video> links to a video -->
+			<!-- The type is the video format -->
+			<!-- CONTROLS is what puts the video controls the page -->
+			<!-- AUTOPLAY does just that. Autoplays the video.  -->
+			
+		<h2>Video Example 2
+		</h2>
+			<video controls autoplay>
+			<!-- controls for the video are nested in the video tag -->
+				<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.mp4" type="video/mp4">
+				<source src="http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge.ogg" type="video/ogg">
+				<track label='Sounds on Video' kind='subtitles' srclang='en' src='bridge-caption.vtt' default>
+				<!-- <track> is the tag used to input the subtitles -->
+				<!-- LABEL is just what you want to call the track -->
+				<!-- kind is obviously what the lettering is. in this case use subtitles -->
+				<!-- SRCLANG is the source language -->
+				<!-- SRC is the input path for the source file -->
+				<!-- DEFAULT makes this the track that is selected by default -->
+				
+			</video>
+			<!-- different way to input video onto a webpage. -->
+			<!-- allows for multiple video sources to allow for different video types -->
+			<!-- Notice that SOURCE doesn't have closing tags -->
+			
+		<h2>Audio Example 
+		</h2>
+			<audio controls>
+				<source src='http://treehouse-code-samples.s3.amazonaws.com/html-video-and-audio/bridge-audio.mp3' type='audio/mp3'>
+			</audio>
+			
+			<!-- the syntax is pretty much the same as the video input -->
+			
+		
+		
+		
+		</div>
+	
+	</body>
+</html>
+
+<!-- You can link to your own video files same as you would any other file just with the video and audio input -->

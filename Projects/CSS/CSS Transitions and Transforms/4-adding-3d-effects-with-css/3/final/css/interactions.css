@@ -1,0 +1,47 @@
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s;
+}
+.button:hover {
+	background: rgba(74,137,202, 1);
+}
+
+/* ================================= 
+  Photo 3D Transforms & Transitions
+==================================== */
+
+.content {
+	perspective: 700px;
+}
+
+/* this makes the content 3d capable. */
+
+.photo {
+	transition: transform 1s cubic-bezier(.55, -.62, .27, 1.2);
+	transform-style: preserve-3d;
+}
+
+/* preserve 3d establishes the children of .content as 3d capable.  */
+
+.photo:hover {
+	transform: rotateX(-180deg);
+}
+
+.side-a,
+.side-b {
+	backface-visibility: hidden;
+}
+
+/* side-a and side-b are on top of each other. this sets the back side of the content to hidden. */
+
+.side-b {
+	transform: rotateX(180deg);
+}
+
+/* with the backside of side-a and -b hidden, rotate side b back to the font so it is visible.  */
+
+
+/* the dowload link doesn't work in firefox due to the properties not being compatible with every browser type.  */

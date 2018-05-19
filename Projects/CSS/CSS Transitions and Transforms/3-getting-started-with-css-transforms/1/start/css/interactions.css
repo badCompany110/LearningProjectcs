@@ -1,0 +1,96 @@
+/* ================================= 
+  Photo Overlay Transitions
+==================================== */
+
+.photo-overlay {
+	opacity: 0;
+	transition: opacity .5s;
+}
+.photo-overlay:hover {
+	opacity: 1;
+}
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s, color .3s;
+}
+.button:hover {
+	color: #fff;
+	background: #4a89ca;
+}
+
+/* ================================= 
+  Image Transforms & Transitions
+==================================== */
+
+/* -- Row 1 --------- */
+
+img:hover{
+	transform: rotate(5deg) scale(1.1);
+	transform-origin: 0 0;
+}
+
+/* transform-origin changes where the transformation takes place. By default it starts at the center.  */
+
+/* This accepts percentages, top left ext.  */
+
+/* scales the selected element by the multiple of what is in the parenthesis. first is x then y axis.  */
+
+img{
+	transition: transform .5s;
+}
+/* -- Row 2 --------- */
+
+.photo img{
+	transform-origin: top right;
+}
+
+.photo:hover img{
+	transform: scale(1.5);
+
+}
+
+
+/* -- Row 3 --------- */
+
+.slide .photo-overlay,
+.slide img{
+	transition:transform 2s cubic-bezier(.17,-0.52,.9,1.34);
+}
+
+/* Selects the slide, its images, and the photo overlay.  */
+
+.slide .photo-overlay{
+	transform: translateX(-100%);
+}
+
+/* this moves the overlay out of sight of the image viewport due to the overflow hidden written into the code */
+
+.slide:hover .photo-overlay{
+	transform: translateX(0);
+}
+
+/* this moves the overlay back onto the screen on hover */
+
+.slide:hover img{
+	transform: translateX(100%);
+}
+
+/* this moves the pic out of the view port as the overlay comes into view */
+
+/* -- Logo ---------- */
+
+.logo:hover{
+	transform: skewX(-20deg);
+}
+
+
+
+
+
+
+
+

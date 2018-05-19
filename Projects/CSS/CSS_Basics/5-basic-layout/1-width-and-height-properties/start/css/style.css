@@ -1,0 +1,346 @@
+/* Web Fonts -------------------- */
+@font-face{
+	font-family:'Regular';
+	src: url('../abolition-regular-webfont.eot');
+  src: url('../abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../abolition-regular-webfont.woff') format('woff'),
+       url('../abolition-regular-webfont.ttf') format('truetype');
+}
+       
+	   /* use the SRC: URL() to link to the web fonts
+	   
+			EOT is proprietary to INTERNET explorer. the webfont.eot?#iefix is a trick to allow this font type to display in older versions of INTERNET EXPLORER.
+			
+			WOFF developed by Mozilla. Supported by all modern browsers.
+			Loads super fast. 
+			
+			TTF is used for safari, android, and ios.   
+			*/
+}
+	/* @font-face ==== this allows for the browser to call and download the required fonts as needed if the viewer of the web page doesn't have the particular font on their computer. Fail safe */
+	
+/* Base Styles -------------------- */
+
+
+*{
+	box-sizing: border-box;
+}
+/* applies the universal selector for the box sizing to the entire doc so you don't have to put each one in individually */
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family:'Regular', Helvetica, Arial, sans-serif;
+}
+
+
+h1 {  
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1em;
+  text-shadow:5px 8px 0 black;
+  /* first is x plane shadow offset */
+  /* second is y plane shadow offset */
+  /* third is the blur */
+  /* fourth is the shadow color */
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img{
+	max-width: 100%; /*makes the image adjust to the size of the div. prevents from not being able to see the whole pic on the screen*/
+	margin-bottom: 20px;
+	/* border-radius: 50%; /*makes the image a circle*/ 
+	border-radius: 10px;
+}
+
+ul{
+	
+	list-style-type: square;
+}
+/* changes the bullet type */
+
+ol{
+	list-style-type: decimal-leading-zero;
+}
+/* changes the bullet type */
+
+li{
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+
+ul,
+ol{
+	list-style-position: inside;
+	padding-left: 0;
+	margin: 30px 0;
+}
+/* changes the default bullets from being outside the border to inside the border */
+/* removes the default indentation from the list items and left aligns them */
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  background-color: #f0e68c;
+  box-sizing: border-box;
+  /* this forces any padding and border widths into its total width and height  */
+  padding-top: 170px;
+  height: 850px;
+  /* background-image: url('../../../3-backgrounds_color-and_images/start/img/mountains.jpg'); */
+  
+  /* places the image as the background of the .main-header */
+  
+  
+  
+  /* background-size: cover; */
+  
+  /* cover places the entire image in the section */
+  /* percentages, pixels, ext can be used with this element */
+  
+  
+  
+  /* background-repeat: no-repeat; */
+  
+  /* by default the image will repeat both vertically and horizontally.  */
+  /* repeat-x repeats it horizontally */
+  /* repeat-y repeats it vertically */
+  
+  
+  
+  /* background-position: center; */
+  
+  /* first word specifies the x axis and second the y axis.  */
+  /* if only one is specified then it is applied to both */
+  /* you can also use percentages and pixel values */
+  
+  background: linear-gradient(#ffa949, transparent 90%),
+	linear-gradient(to top, white, transparent),
+	url('../../../3-backgrounds_color-and_images/start/img/mountains.jpg') no-repeat center / cover;
+	
+	/* you can have multiple background images separated by a comma. in the example above i used a linear gradient that fades to transparency so the image shows through. Also blended the white from the bottom to being transparent at the top. 
+		
+		Importance of layers is from bottom to top*/
+  
+  /* background shorthand. order goes COLOR, IMAGE, REPEAT,/ SIZE */
+  
+  /* background-image: linear-gradient(to top, black 10%, firebrick 30%, blue) */
+/* 										to bottom,
+										to left,
+										to right,
+										45deg,
+						linear gradients fade the colors from one side to the other.
+						By default the fading percentage is evenly spaced. You can change this by adding percentages after the color. 
+						
+						radial-gradient starts at the center and moves to the outer edges in the shape of an ellipse
+										circle at top right, 
+										*/
+						
+						
+}
+
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;  
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+  
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #ffa949;
+}
+
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 75%;
+  max-width: 900px; /* sets a max width at 900 in case of wide screen*/
+  box-sizing: border-box; /*forces everything inside the width dimension*/
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+  /* keep in mind that the padding and border are added to the height and width.  */
+  /* In order to get a specific size, use the BOX-SIZING feature */
+}
+
+.wildlife {
+  color: white;
+  background-color: #434a52;
+  background:url('../img/bear.jpg') no-repeat center/cover;
+  padding: 18% 24%;
+  border-top: 10px solid #ffa949;
+  margin: 105px 0 60px;
+  box-shadow: -5px -15px 5px 20px black;
+  /* first is x plane
+	second is y plane
+	third is the blur factor
+	fourth is the spread factor which makes the shadow bigger
+	fifth is the color*/
+	/* you can also ad 'inset' at the beginning box-shadow:inset to make the box shadow inside instead of out */
+	border-radius:10px;
+}
+
+.arrow{
+	width: 50px;
+	margin-top: 150px;
+}
+
+/* Floated Columns ------------------ */
+
+.resorts,
+.tips{
+	width: 46.5%;
+	
+}
+/* this makes the 2 divs take up 46.5 % of their container */
+
+.resorts{
+	float: left;
+}
+/* moves the resorts div over to the left side of the layout. */
+.tips{
+	float: right;
+}
+/* moves the tips div to the right side of the page */
+/* this allows for the two div with all of their content to be side by side on the page */
+
+
+/* Float Clearfix */
+
+.group:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+/* this keeps the content from collapsing and provides for even flow of the content without overlap */
+
+
+/* Media Queries -------------------- */
+/* these allow you to set parameter for certain aspects of the page to take place when certain criteria are met.  */
+
+@media(max-width:1024px){
+	.primary-content,
+	.secondary-content{
+		width: 90%;
+	}
+	.wildlife{
+		padding: 10% 12%;
+		margin: 50px 0 20px;
+	}
+}
+/* @media default applies to the entire page */
+
+@media(max-width: 768px){
+	.primary-content,
+	.secondary-content{
+		width: 100%;
+		padding: 20px;
+		border-top: none;
+	}
+	.main-header{
+		max-height: 380px;
+		padding: 50px 25px 0px;
+	}
+	.title{
+		font-size: 1.3rem;
+		border: none;
+	}
+	h1{
+		font-size: 5rem;
+		line-height: 1.1;
+	}
+	.arrow{
+		display: none;
+	}
+	.intro{
+		font-size: 1rem;
+	}
+	.resorts,
+	.tips{
+		float: none;
+		width: 100%;
+	}
+	.main-footer{
+		padding: 20px 0;
+	}
+}

@@ -1,0 +1,9 @@
+<h1> Hello This is My Template </h1>
+
+
+	<% @pages.each do |page| %>
+	<p><%= link_to page.title, page%></p>
+	<%end%>
+	
+
+	<%= link_to 'New Page', create_path %>

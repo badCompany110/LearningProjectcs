@@ -1,0 +1,23 @@
+/* :first-child,:last-child, :only-child,: :empty------------------ 
+------------------------------------------------------------------*/
+
+li:first-child{
+	background-color: #20b2aa;
+	color: white;
+}
+
+li:last-child{
+	background-color: #20b2aa;
+	color: white;
+	
+}
+
+span:only-child{
+	color: #52bab3;
+	font-size: 1.5em;
+}
+
+
+li:empty{
+	background: tomato;
+}

@@ -1,0 +1,127 @@
+/* Base Styles -------------------- */
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {  
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: .5em;
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  background-color: #ffa949;
+}
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;  
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.callout{
+	font-size: 1.25em;
+	border-bottom: 3px solid orange;
+	padding: 0 9px 3px;
+	margin-top: 20px;
+	display: inline-block;
+	/* links are inline by default. You have to set the diplay to inline-block in order for the margin and padding to take effect */
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #ffa949;
+}
+
+.t-border {
+  border-top: 2px solid lightgrey;
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 60%;
+  margin: auto;
+}
+
+.wildlife{
+	color: white;
+	background-color: #434a52;
+	/* padding-top: 100px; */
+	/* padding-right: 120px; */
+	/* padding-bottom: 100px; */
+	/* padding-left: 120px */
+	/* this is the long version for padding. the short hand is faster */
+	padding: 18% 24%;
+	/* if only 1 is defined then the padding is applied to all 4 sides. If 2 are defined then first is for top and bottom and second is for left and right. If 3 are defined then the first is for the top, the second is for the left and right sides, and the third is for bottom. if four, the 2nd value applies to the right side and the 4th to the left. Moves clockwise   */
+	
+	border-top: 10px solid orange;
+	
+	/* border:10px solid red; */
+	/* border-bottom-color: green; */
+	/* width, border type'solid, dotted. dashed', and color */
+	
+	/* border-width:  */
+	/* border-style: */
+	/* border-color: */
+	/* all of these work clockwise if you want to manipulate one side or multiple of the border */
+	
+	margin:100px 0 60px;
+	
+}
+
+
+

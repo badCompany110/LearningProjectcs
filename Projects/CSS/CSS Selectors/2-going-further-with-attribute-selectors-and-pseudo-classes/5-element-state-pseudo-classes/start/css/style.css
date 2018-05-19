@@ -1,0 +1,20 @@
+/* UI element states pseudo-classes ------------ */
+
+input:focus,
+textarea:focus{
+	border-color: #00fa9a;
+}
+
+input:disabled{
+	background: lightgray;
+}
+
+/* input[type='checkbox']:checked+label{ */
+	/* font-weight: bold; */
+/* } */
+
+input:checked+label{
+	font-weight: bold;
+}
+
+				/* Makes the input label bold if the check box is checked */

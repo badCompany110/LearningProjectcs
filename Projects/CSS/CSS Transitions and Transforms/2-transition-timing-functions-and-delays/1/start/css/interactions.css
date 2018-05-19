@@ -1,0 +1,64 @@
+/* ================================= 
+  Photo Overlay Transition
+==================================== */
+
+/* .photo-overlay {
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: .5s;
+} */
+
+.photo-overlay{
+	opacity: 0;
+	transition: opacity .5s;
+}
+/* Shorthand for photo overlay transition */
+
+.photo-overlay:hover {
+	opacity: 1;
+}
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+/* .button{
+	opacity: 0;
+	transition-property: opacity,background,box-shadow;
+	transition-duration: .5s;
+	transition-delay: .2s,.4s,0s;
+} */
+
+.button{
+	transition: opacity .5s .2s, background .5s .4s, box-shadow .5s 0s;
+}
+/* shorthand for the button transition */
+
+.photo-overlay:hover .button{
+	opacity: 1;
+}
+
+/* defines the button in photo-overlay on hover to have an opacity of 1 */
+
+
+.button:hover{
+	background:rgba(74,34,202,1);
+	box-shadow:0 0 0 3px rgba(255,255,255,.7);
+}
+
+/* .btn-icon{
+	transition-property: opacity, left;
+	transition-duration: .5s;
+	transition-delay: .3;
+	transition-timing-function: ease-out;
+} */
+
+.btn-icon{
+	transition: opacity .5s .3s ease-out ,left .5s .3s ease-out ;
+}
+/* shorthand for btn-icon */
+
+.button:hover .btn-icon{
+	opacity: 1;
+	left: 80%;
+}

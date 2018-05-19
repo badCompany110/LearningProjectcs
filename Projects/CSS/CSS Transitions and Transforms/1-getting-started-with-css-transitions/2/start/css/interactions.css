@@ -1,0 +1,45 @@
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	color:  	#daa520;
+	border: 10px solid #008b8b;
+	background: #4a89ca;
+	transition-duration: 0.4s,8s, 5s;
+	transition-property: background, border-radius, color;
+}
+
+/* transition-duration sets the change of the background to take place over the course of time specified */
+
+.button:hover{
+	color: white;
+	background: #d36a62;
+	border-radius: 50%;
+}
+
+/* Sets the transitions to take place on a hover */
+
+
+.button:active{
+	background: #8b0000;
+}
+
+/* Sets the background to change color on active */
+
+.photo-overlay{
+	transition-property: opacity;
+	transition-duration: 0.7s;
+}
+
+/* specifies the property and duration of the element */
+
+.photo-overlay:hover{
+	opacity: .8;
+}
+
+/* Sets those properties to take place on a hover */
+
+/* ================================= 
+  Photo Overlay Transitions
+==================================== */

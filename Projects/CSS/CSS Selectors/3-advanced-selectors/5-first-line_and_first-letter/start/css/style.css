@@ -1,0 +1,21 @@
+/* Pseudo-elements -------------------------------- */
+
+.intro:first-line{
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+/* targets the first line of selected element no matter what size the screen is */
+
+.intro:first-letter{
+	float: left;
+	font-size: 80px;
+	color: white;
+	padding: 5px 10px;
+	background: #384047;
+	margin: 10px 10px 0 0;
+	border-radius: 5px;
+	line-height: 1;
+}
+
+/* targets the first letter of selected element no matter what size the screen is */ 

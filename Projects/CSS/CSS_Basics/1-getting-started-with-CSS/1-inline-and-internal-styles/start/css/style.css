@@ -1,0 +1,23 @@
+
+@import 'import-styles.css';
+/* this will import the css styles from the path into this stylesheet. */
+/* @import must precede everything else in order for this method to work correctly */
+
+/* If you import a lot of files, this can slow down the load time of your page */
+
+body {
+	text-align: center;
+}
+
+h1{
+	font-size: 72px;
+	color: white;
+}
+
+header {
+	background-color: orange;
+}
+
+p {
+	font-size: 20px;
+}

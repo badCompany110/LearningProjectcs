@@ -1,0 +1,67 @@
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s;
+}
+.button:hover {
+	background: rgba(74,137,202, 1);
+}
+
+/* ================================= 
+  Photo 3D Transforms & Transitions
+==================================== */
+
+/* .content{ */
+	/* perspective: 800px; */
+	/* perspective-origin: bottom center; */
+	
+		/* Moving the perspective to the direct container of each photo makes each photo rotate identical unlike when the perspective is in the overall container of .content.  */
+			/* perspective-origin changes the viewing angle  */
+			/* accepts 2 inputs and can be percentages or words */
+}
+
+/* In order for the 3d effects to take place, you have to set the perspective to 3d */
+
+
+/* .photo-container{ */
+	/* transform: rotateY(55deg); */
+/* } */
+
+.photo-container{
+	perspective: 800px;
+	perspective-origin: bottom center;
+	
+}
+
+
+.photo{
+	transform-style: preserve-3d;
+	transition-property: transform;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(.55,*.62,.27,.12);
+}
+
+.photo:hover{
+	transform: rotate3d(1,0,0, 180deg);
+	/* rotate3d(x,y,z, rotation angle) */
+	/* value always 1 or 0 for xyz */
+	
+	
+		/* transform: rotateX(180deg); */
+					/* rotateZ */
+}
+
+.side-a,
+.side-b{
+	backface-visibility: hidden;
+}
+
+/* makes the backside of the both side a and b hidden. */
+
+.side-b{
+	transform: rotateX(180deg);
+}
+
+/* this rotates side b to the front for viewing  */

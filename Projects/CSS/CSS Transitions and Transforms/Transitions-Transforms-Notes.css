@@ -1,0 +1,291 @@
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	color:  	#daa520;
+	border: 10px solid #008b8b;
+	background: #4a89ca;
+	transition-duration: 0.4s,8s, 5s;
+	transition-property: background, border-radius, color;
+}
+
+/* transition-duration sets the change of the background to take place over the course of time specified */
+
+.button:hover{
+	color: white;
+	background: #d36a62;
+	border-radius: 50%;
+}
+
+/* Sets the transitions to take place on a hover */
+
+
+.button:active{
+	background: #8b0000;
+}
+
+/* Sets the background to change color on active */
+
+.photo-overlay{
+	transition-property: opacity;
+	transition-duration: 0.7s;
+}
+
+/* specifies the property and duration of the element */
+
+.photo-overlay:hover{
+	opacity: .8;
+}
+
+/* Sets those properties to take place on a hover */
+
+
+
+
+
+
+/* ================================= 
+  Photo Overlay Transition
+==================================== */
+
+/* .photo-overlay {
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: .5s;
+} */
+
+.photo-overlay{
+	opacity: 0;
+	transition: opacity .5s;
+}
+/* Shorthand for photo overlay transition */
+
+.photo-overlay:hover {
+	opacity: 1;
+}
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+/* .button{
+	opacity: 0;
+	transition-property: opacity,background,box-shadow;
+	transition-duration: .5s;
+	transition-delay: .2s,.4s,0s;
+} */
+
+.button{
+	transition: opacity .5s .2s, background .5s .4s, box-shadow .5s 0s;
+}
+/* shorthand for the button transition */
+
+.photo-overlay:hover .button{
+	opacity: 1;
+}
+
+/* defines the button in photo-overlay on hover to have an opacity of 1 */
+
+
+.button:hover{
+	background:rgba(74,34,202,1);
+	box-shadow:0 0 0 3px rgba(255,255,255,.7);
+}
+
+/* .btn-icon{
+	transition-property: opacity, left;
+	transition-duration: .5s;
+	transition-delay: .3;
+	transition-timing-function: ease-out;
+} */
+
+.btn-icon{
+	transition: opacity .5s .3s ease-out ,left .5s .3s ease-out ;
+}
+/* shorthand for btn-icon */
+
+.button:hover .btn-icon{
+	opacity: 1;
+	left: 80%;
+}
+
+
+
+
+
+
+
+/* ================================= 
+  Photo Overlay Transitions
+==================================== */
+
+.photo-overlay {
+	opacity: 0;
+	transition: opacity .5s;
+}
+.photo-overlay:hover {
+	opacity: 1;
+}
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s, color .3s;
+}
+.button:hover {
+	color: #fff;
+	background: #4a89ca;
+}
+
+/* ================================= 
+  Image Transforms & Transitions
+==================================== */
+
+/* -- Row 1 --------- */
+
+img:hover{
+	transform: rotate(5deg) scale(1.1);
+	transform-origin: 0 0;
+}
+
+/* transform-origin changes where the transformation takes place. By default it starts at the center.  */
+
+/* This accepts percentages, top left ext.  */
+
+/* scales the selected element by the multiple of what is in the parenthesis. first is x then y axis.  */
+
+img{
+	transition: transform .5s;
+}
+/* -- Row 2 --------- */
+
+.photo img{
+	transform-origin: top right;
+}
+
+.photo:hover img{
+	transform: scale(1.5);
+
+}
+
+
+/* -- Row 3 --------- */
+
+.slide .photo-overlay,
+.slide img{
+	transition:transform 2s cubic-bezier(.17,-0.52,.9,1.34);
+}
+
+/* Selects the slide, its images, and the photo overlay.  */
+
+.slide .photo-overlay{
+	transform: translateX(-100%);
+}
+
+/* this moves the overlay out of sight of the image viewport due to the overflow hidden written into the code */
+
+.slide:hover .photo-overlay{
+	transform: translateX(0);
+}
+
+/* this moves the overlay back onto the screen on hover */
+
+.slide:hover img{
+	transform: translateX(100%);
+}
+
+/* this moves the pic out of the view port as the overlay comes into view */
+
+/* -- Logo ---------- */
+
+.logo:hover{
+	transform: skewX(-20deg);
+}
+
+
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	transition: background .3s;
+}
+.button:hover {
+	background: rgba(74,137,202, 1);
+}
+
+
+
+
+
+
+
+/* ================================= 
+  Photo 3D Transforms & Transitions
+==================================== */
+
+/* .content{ */
+	/* perspective: 800px; */
+	/* perspective-origin: bottom center; */
+	
+		/* Moving the perspective to the direct container of each photo makes each photo rotate identical unlike when the perspective is in the overall container of .content.  */
+			/* perspective-origin changes the viewing angle  */
+			/* accepts 2 inputs and can be percentages or words */
+}
+
+/* In order for the 3d effects to take place, you have to set the perspective to 3d */
+
+
+/* .photo-container{ */
+	/* transform: rotateY(55deg); */
+/* } */
+
+.photo-container{
+	perspective: 800px;
+	perspective-origin: bottom center;
+	transform-style: preserve-3d;
+}
+
+/* in the next div down the above code is required to set the content to 3d in firefox */
+
+.photo{
+	transform-style: preserve-3d;
+	transition-property: transform;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(.55,*.62,.27,.12);
+}
+
+.photo:hover{
+	transform: rotate3d(1,1,1, 180deg);
+	/* rotate3d(x,y,z, rotation angle) */
+	/* value always 1 or 0 for xyz */
+	
+	
+		/* transform: rotateX(180deg); */
+					/* rotateZ */
+}
+
+.side-a,
+.side-b{
+	backface-visibility: hidden;
+}
+
+/* makes the backside of the both side a and b hidden. */
+
+.side-b{
+	transform: rotateX(180deg);
+}
+
+/* this rotates side b to the front for viewing  */
+
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+ruby new file_name
+	This is how you create a new rails file
+
+
+ruby bin\ whatever command you are running
+	This is how you run a ruby command on windows
+	
+	ruby bin\rails server
+		Runs the current app in the server
+			make sure to use the cd and file name to change to the folder before running the rails server
+	
+	
+CRUD OPERATIONS
+	C reate Instances
+	R ead data for
+	U pdate data for 
+	D elete instances of
+	
+	
+	ruby bin\rails generate scaffold Post title:string
+		This creates the post page on my website. which you can see in the create db/migrate below
+		http://localhost:3000/posts
+		
+		generate = the sub command
+		
+		scaffold = type of code we want to generate
+		
+		Post = the model we want to create a scaffold for 
+			After this runs I will be able to create objects with a class of Post, save them to the data base and load them in again, and display them in our browser.
+			
+		title = the attribute I want the Post objects to have. You can have more than one.
+		
+				string = the type of data that the title will posses. In this case a string
+----------------------------------------------------------
+----------------------------------------------------------
+	create    db/migrate/20180402233459_create_posts.rb
+----------------------------------------------------------
+----------------------------------------------------------	
+		this will be one of the first lines of code after generation
+		
+	ruby bin\rails db:migrate
+	
+		run this to make the migration work and update the database therefore updating the website
+		
+		
+----------------------------------------------------------
+----------------------------------------------------------
+	STEPS THAT RAILS GOES THROUGH ON THE POSTS REQUEST
+----------------------------------------------------------
+----------------------------------------------------------
+	1. RAILS looks at the request to figure out which code should handle it. 
+	
+	2. the requests gets routed to an ACTION METHOD on a CONTROLLER
+	
+	3. CONTROLLER loads the resource in from a database using a MODEL class
+	
+	4. CONTROLLER renders a VIEW using the model data to generate the response content
+	
+		1. Started GET "/posts" for 127.0.0.1 at 2018-04-02 18:46:05 -0500
+		
+		2. Processing by PostsController#index as HTML
+		  Rendering posts/index.html.erb within layouts/application
+		  
+		3. Post Load (1.5ms)  SELECT "posts".* FROM "posts"
+		
+		4.  Rendered posts/index.html.erb within layouts/application (47.8ms)
+		Completed 200 OK in 11212ms (Views: 11120.6ms | ActiveRecord: 3.0ms)
+		
+----------------------------------------------------------
+----------------------------------------------------------
+	Console " much like irb" the only difference is you can edit and save changes to the data base. 
+----------------------------------------------------------
+----------------------------------------------------------		ruby bin\rails console
+.new
+.all
+.find(id)
+.destroy
+.first 
+.last
+
+
+----------------------------------------------------------
+----------------------------------------------------------
+	Adding content to the database
+----------------------------------------------------------
+----------------------------------------------------------
+ruby bin\rails generate migration AddBodyToPosts body:text
+
+			generate is self explanatory
+			migration = moves the content to the database
+			AddBodyToPost = The class name 
+			body = the column name 
+			text = type of input, in this case I use text because the content will be longer is a better use than string. 
+				You can add as many columns as you would like.
+      
+	  invoke  active_record
+      create    db/migrate/20180403235525_add_body_to_posts.rb
+	  
+ruby bin\rails db:migrate
+
+
+----------------------------------------------------------
+----------------------------------------------------------
+	Partials
+----------------------------------------------------------
+----------------------------------------------------------
+
+Much like sass, you can have partial files that are reference when one wants to duplicated code over several pages without having to make changes to each page individually. 
+
+You can spot a partial because like sass it is denoted with an _
+
+the file that it is linking to it will have a RENDER "name of the partial"

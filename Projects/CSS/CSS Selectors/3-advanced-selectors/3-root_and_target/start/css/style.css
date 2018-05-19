@@ -1,0 +1,25 @@
+:root{
+	background:  	#87ceeb;
+}
+
+:target{
+	background-color: darkgray;
+	color: #00ff7f;
+}
+
+#col-c:target{
+	background-color: #eff1f2;
+	color: #00ff7f;
+	box-shadow: -10px 30px 6px #2e8b57;
+}
+
+input:not([type='submit']){
+	border: 1px solid red;
+}
+
+/* this targets all input selectors that do NOT have the type of submit */
+
+.col:not(:first-child),
+nav a:not(:first-child){
+	margin-left: 6px;
+}

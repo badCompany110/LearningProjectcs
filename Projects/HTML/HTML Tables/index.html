@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+	<table>
+	<caption>Employee Information
+	</caption>
+	<!-- Basically a title for the table and its info -->
+	<!-- Allows for search engines to find and understand the content faster -->
+	<!-- Can be hidden by Css while still remaining visible to search engines -->
+		<thead>
+			<tr>
+			<!-- Creates the Row -->
+				<th scope='col'>Name
+				</th>
+				<!-- Creates the cell -->
+				<!-- td creates a normal cell -->
+				<!-- th specifies that it is a cell heading -->
+				<!-- scope='col' specifies that the name is the title of the column -->
+				<th scope='col'>Email
+				</th>
+				<th scope='col'>Job Role
+				</th>
+			</tr>
+		</thead>
+		<!-- wraps the heads of the columns of a table -->
+		<!-- not necessary, helps with styling, search engines, ext.  -->
+		<tfoot>
+			<tr>
+				<td colspan='1'>Data is updated every 15 minutes. 
+				</td>
+				<!-- the colspan = column span. 1 makes the text span 1 column. -->
+				<!-- 2 and 3 would make the text span 2/3 columns respectively -->
+			</tr>
+		</tfoot>
+		<!-- Table footer -->
+		<tbody>
+			<tr>
+				<th scope='row'>Zach Irvin
+				</th>
+				<!-- scope='row' specifies that zach irvin is the title of the row -->
+				<td>zachirvin@rocketmail.com
+				</td>
+				<td>Sub Contractor
+				</td>
+			</tr>
+			<tr>
+				<th scope='row'>Aaron Irvin
+				</th>
+				<td>N/A
+				</td>
+				<td>Youngest Son
+				</td>
+			</tr>
+			<tr>
+				<th scope='row'>Chuck Irvin	
+				</th>
+				<td>cirvin@yahoo.com
+				</td>
+				<td>Business Owner
+				</td>
+			</tr>
+			<tr>
+				<th scope='row'>Sam Irvin		
+				</th>
+				<td>sirvin@gmail.com
+				</td>
+				<td>Accountant
+				</td>
+			</tr>
+		</tbody>
+		<!-- wraps the content of the table -->
+		<!-- defines the body of table -->
+		<!-- Should never include the first row.  -->
+		<!-- Optional but nice to have -->
+		
+	</table>
+	<!-- Tables don't have any attributes. they are all global. -->
+	<!-- <table> nothing goes in between the E and the > -->
+
+    
+
+  </body>
+</html>

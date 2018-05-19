@@ -1,0 +1,56 @@
+/* Pseudo-elements -------------------------------- */
+
+.intro::first-line {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.intro::first-letter {
+  float: left;
+  font-size: 80px;
+  color: white;
+  padding: 5px 10px;
+  background: #384047;
+  margin: 10px 10px 0 0;
+  border-radius: 5px;
+  line-height: 1;
+}
+
+.jpg:before{
+	content: 'JPG -  ' url(../img/icn-picture.svg);
+	font-size: .75em;
+	margin-right: 6px;
+}
+
+				/* Places the JPG and image before the .jpp class */
+
+.zip:after{
+	content: ' - ZIP -  ' url(../img/icn-zip.svg);
+	font-size: .75em;
+	margin-left: 6px;
+}
+
+				/* Places after the .zip class */
+
+h1:before,
+h1:after{
+	content:'';
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: coral;
+	margin: 0 10px;
+}
+
+				/* Creates a circle placed before and after the H1 element */
+
+.d-loads a:after{
+	content: attr(title);
+	display: inline-block;
+	color: initial;
+	font-size: .65em;
+	margin-left: 5px;
+}
+
+				/* Places the title after the a element of the .d-loads class. can also be used for href ext */

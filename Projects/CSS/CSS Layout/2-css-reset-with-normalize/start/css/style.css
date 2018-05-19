@@ -1,0 +1,155 @@
+
+/* ===========================================
+		BASE ELEMENT STYLES
+==============================================*/
+*{
+	box-sizing: border-box;
+}
+
+body{
+	line-height: 1.5;
+	}
+
+	
+	
+a{
+	color: #000080;
+	text-decoration: none; 
+}
+
+
+
+/* ===========================================
+		lAYOUT STYLES
+==============================================*/
+
+.main-header{
+	background:#0000ff;
+	padding: 1em 0;
+	text-align: center;
+	
+	
+}
+
+.main-footer{
+	background: #a9a9a9;
+	padding: 2% 0 2%;
+}
+
+
+
+
+.wrapper{
+	padding: 0 1em;
+}
+
+
+
+.wrapper-footer{
+	text-align: center;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+
+/* PAGE ELEMENTS */
+
+
+.name,
+.main-nav li{
+	background: #708090;
+	margin: 6px 0;
+	}
+	
+	
+.main-nav a{
+	color:#87ceeb;
+	font-size: 1.2em;
+	display: block;
+	text-align: center;
+	padding: 10px;
+	
+}
+
+.main-nav a:hover{
+	color: #ff00ff;
+}
+ 
+.img{
+		width:100%;
+	}
+
+
+	
+
+
+
+
+/* ===========================================
+		Media Queries
+==============================================*/
+
+@media(min-width: 769px){
+	.main-h-wrapper{
+		min-height: calc(100vh - 94.8333px);
+		/* viewport height */
+		/* 100vh equals the page is 100 percent of the viewport */
+		/* the footer height equals 89px */
+	}
+	
+	.wrapper{
+	width: 70%;
+	margin: auto;
+	max-width:1000px;
+	margin: auto;
+	}
+	
+
+
+	.main-nav li{
+		display: inline-block;
+		padding: 0 6px 0 6px;
+		width: 24.3%;
+	}
+	
+	.wrapper-body-welcome{
+		width: 48%;
+		display: inline-block;
+		float: left;
+		padding: 0 15px;
+		
+		background-color:#b0c4de; 
+	}
+	
+	.wrapper-body-food{
+		width: 48%;
+		display: inline-block;
+		float: right;
+		padding: 0 15px;
+		
+		background-color:#b0c4de; 
+	}
+	
+	.clearfix::after{
+		content:'';
+		display:table;
+		clear:both;
+	}
+	
+	/* this will prevent the collapse of containers when dealing with floated elements.  */
+	
+}
+	
+
+	
+	
+	
+
+
+
+
+
+	
+

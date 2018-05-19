@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+    </head>
+    <body>
+	<form action='index.html' method='post'>
+	<!-- Action is the web address that is going to process the form -->
+	<!-- method is the http method that the browser uses to submit the form -->
+	<!-- Can be POST or GET -->
+	<!-- Post means that the info is posted to the server	-->
+	<!-- Get means that info is sent within the URL and the parameter are separated by a ? -->
+		<h1>Sign Up
+		</h1>
+		<fieldset>
+			<legend><span class='number'>1
+			</span>Your Basic Info
+			</legend>
+			<!-- legend allows you to label the two different field sets -->
+			<!-- the SPAN allows for numbering of the different sections -->
+			<!-- there is a preset in the css for the class number -->
+				<label for='name'>Name:
+				</label>
+				<!-- label obviously creates a label for the text field -->
+				<!-- the FOR='NAME' matches the label with the ID=NAME -->
+				<!-- this makes it so if you click on the name label it puts the cursor in the field.  -->
+				<input type='text' id='name' name='user_name'>
+				</input>
+				<!-- type indicates what kind of input you want -->
+				<!-- id not required, but does help especially if you need to target css or javascript -->
+				<!-- name needed so when the form is submitted the server can process appropriately -->
+				<!-- Notice that the input element doesn't have a closing tag -->
+				<label for='mail'> Email:
+				</label>
+				<input type='email' id='mail' name='user_email'>
+				
+				<label for='password'> Password:
+				</label>
+				<input type='password' id='password' name='user_password'>
+				<label>Age
+				</label>
+				<!-- labeling the age field -->
+				<input type='radio' id='under_13' value='under_13' name='user_age'>
+				</input>
+				<!-- RADIO is a click button-->
+				<!-- the id and value are self explanatory -->
+				<!-- the NAME is used to group the two buttons together so  -->
+				<!-- only one can be pressed at a time -->
+				<label for='under_13' class='light'>Under 13
+				</label><br>
+				<!-- Want the label to come after the button and have break -->
+				<!-- The class if for css formatting in from the other file -->
+				<input type='radio' id='over_13' value='over_13' name='user_age'>
+				</input>
+				<!-- the NAME is used to group the two buttons together so  -->
+				<!-- only one can be pressed at a time -->
+				<label for='over_13' class='light'>Over 13
+				</label>
+			</fieldset>
+			<!-- fieldset acts as a grouper as well as having auto presets for padding ext. -->
+		<fieldset>
+			<legend><span class='number'>2
+			</span>Your Profile
+			</legend>
+				<label for='bio'> Biography:
+				</label>
+				<textarea id='bio' name='user_bio'>
+				</textarea>
+				<label for='job'>Job Role:
+				</label>
+				<!-- the label for the drop down menu -->
+				<select id='job' name='user_job'>
+					<optgroup label='Construction'>
+						<option value='Construction_worker'>Construction worker
+						</option>
+						<option value='Electrician'>Electrician
+						</option>
+						<option value='Plumber'>Plumber
+						</option>
+						<option value='Framer'>Framer
+						</option>
+					</optgroup>
+					<!-- OPTGROUP creates a group inside the select drop down menu. -->
+					<!-- the LABEL designates what the group is called -->
+					<optgroup label='Computer'>
+						<option value='Web_designer'>Web designer
+						</option>
+						<option value='IOS_Designer'>IOS Designer
+						</option>
+						<option value='Website_Developer'>Website Developer
+						</option>
+						<option value='Android_Developer'>Android Developer
+						</option>
+					</optgroup>
+				</select>
+				<!-- SELECT creates the area to make a drop down menu -->
+				<!-- OPTION allows you to put in the different options in the drop down -->
+				
+				<label> Interests
+				</label>
+				<!-- creates a label for the group of check boxes -->
+				<input type='checkbox' id='development' value='interest_development'
+				name='user-interest'>
+				<!-- much the same coding as a radio button -->
+				<!-- type= type of input -->
+				<!-- id gives it s designation -->
+				<!-- value is for back end -->
+				<!-- name puts all of the check boxes in the same group -->
+				<label class='light' for='development'> Development
+				</label><br>
+				<!-- class is for the css -->
+				<!-- for associates the label with the check box -->
+				<input type='checkbox' id='design' value='interest_design'
+				name='user-interest'>
+				<label class='light' for='design'> Design
+				</label><br>
+				<input type='checkbox' id='business' value='interest_business'
+				name='user-interest'>
+				<label class='light' for='business'> Business
+				</label>
+			</fieldset>	
+			<!-- textarea is used when a single line of text won't be enough. Such as commets ext.  -->
+			<button type='submit'> Sign Up
+			</button>
+			<!-- type specifies the type of button -->
+			<!-- Submit is self explanatory -->
+			<!-- There is also RESET which resets the whole form -->
+	</form>
+
+      
+      
+    </body>
+</html>

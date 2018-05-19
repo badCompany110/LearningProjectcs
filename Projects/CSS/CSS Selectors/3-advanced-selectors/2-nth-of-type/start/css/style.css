@@ -1,0 +1,46 @@
+/* Structural Pseudo-classes------------------ */
+
+/* div:nth-child(4) {
+  background: #52bab3;
+  color: white;
+} */
+
+div:nth-of-type(4){
+	background: #52bab3;
+  color: white;
+}
+/* Will always target the 4th div no matter if there are other nested elements inside its parent element. nth-child doesn't do this */
+
+div:nth-last-of-type(4){
+	background: #52bab3;
+  color: white;
+}
+
+/* same as nth-of-type but starts from the bottom up */
+
+
+
+
+
+:root{
+	background:  	#87ceeb;
+}
+
+				/* targets the root of the document, generally the whole doc */
+
+:target{
+	background-color: darkgray;
+	color: #00ff7f;
+}
+
+#col-c:target{
+	background-color: #eff1f2;
+	color: #00ff7f;
+	box-shadow: -10px 30px 6px #2e8b57;
+}
+
+input:not([type='submit']){
+	border: 1px solid red;
+}
+
+				/* this targets all input selectors that do NOT have the type of submit */

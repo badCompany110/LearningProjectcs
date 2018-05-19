@@ -1,0 +1,94 @@
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+.container {
+  display: grid;
+  grid-template-columns:1fr;
+	/* grid-template-rows: 100px 50px minmax(200px, 1fr) 100px; */
+	
+	grid-auto-rows: minmax(150px, auto);
+  grid-gap: 10px;
+  height: 100vh;
+  grid-template-areas: 
+  'header' 
+  
+  'nav'
+  
+  'main'
+  
+  'aside'
+  
+  'footer';
+}
+
+/* each name equals a column. Each string equals a row.  */
+
+
+header{
+	grid-area: header;
+	
+		/* grid-column-start: 1; */
+		/* grid-column-end: 3; */
+		
+		/* grid-column-start: 1; */
+		/* grid-column-end: -1; */
+			/* Same as the one above. However if you ever change the number of columns, don't have to change the column end */
+			
+		/* grid-column: 1/-1; */
+			/* shorthand for grid-column-start and end */
+}
+
+nav{
+	grid-area: nav;
+}
+
+main{
+	grid-area: main;
+	
+		/* grid-row-start: 2; */
+		/* grid-row-end: 3; */
+		
+		/* grid-row: 2/3; */
+			/* Shorthand */
+}
+
+aside{
+	grid-area: aside;
+}
+
+footer{
+	grid-area: footer;
+	
+		/* grid-column-start: 1; */
+		/* grid-column-end: -1; */
+}
+
+
+/* ===================================== 
+   Media Queries
+======================================== */
+
+@media(min-width: 768px){
+	.container{
+		grid-template-columns: 1fr 2fr 3fr;
+		grid-template-rows: 100px minmax(150px, auto) 100px;
+		grid-template-areas:
+		
+		'header header header'
+		
+		'nav main aside'
+		
+		'footer footer footer'
+	}
+}
+
+@media(min-width: 900px){
+	.container{
+		grid-template-areas:
+		
+		'header header header'
+		'nav main aside'
+		'nav footer footer';
+	}
+}
